@@ -35,20 +35,6 @@ main()
     for(l=0;l<m;l++)
         mostrar(x,arreglo);
     break;
-    case 3:
-    	printf("\nIngrese la cantidad de personajes a capturar: \n(Con un maximo de 5)"); scanf("%i", &per);
-    for(i=0;i<per;i++)
-{
-
-	       printf("Ingresa el nombre del %i° personje:\n",i+1);
-			    fflush(stdin);gets(personaje[i].nom);
-			    printf("Ingresa el tipo: \n");
-			    fflush(stdin);gets(personaje[i].ti);
-			    printf("¿Cual es la fuerza: \n");
-			    fflush(stdin);gets(personaje[i].fuer);
-			    printf("Ingrese la salud: \n");
-			    fflush(stdin);gets(personaje[i].sal);}
-	    break;
 		default:
 		printf("\nOpcion no valida\n");}
 	    printf("\n�Desea repetir el programa? 1=si 0=no\n");
