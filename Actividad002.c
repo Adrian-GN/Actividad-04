@@ -11,12 +11,11 @@ main()
     float p, s;
     char arreglo[50], resp;
     do{
-    system("CLS");
-    printf("\tBienvenido\nPor favor ingrese el n煤mero de la opci贸n deseada:\n1.Num. enteros\n2.Funci贸n\n3.Personaje\n");
+    printf("\tBienvenido\nPor favor ingrese el n煤mero de la opci贸n deseada:\n1.Num. enteros\n2.Funci贸n\n3.Personaje\n4. Mostar Personajes\n");
     scanf("%i", &op);
     switch(op){
-    	system("CLS");
     case 1:
+    	system("CLS");
         for(i=0;i<5;i++){
         printf("\nIngrese el %i numero:\n", i+1);
         scanf("%i", &n[i]);
@@ -28,6 +27,7 @@ main()
         printf("____________\nsuma: %.0f\npromedio: %.2f",s, p);
     break;
     case 2:
+    	system("CLS");
         printf("\nIngrese las veces a repetir el arreglo:\n", p+1);
         scanf("%i", &m);
         printf("Ingrese una palabra\n");
@@ -49,6 +49,13 @@ main()
 			    printf("Ingrese la salud: \n");
 			    fflush(stdin);gets(personaje[i].sal);}
 	    break;
+	case 4:
+		if(per>0){
+			for(f=0;f<per;f++)
+				printf("Personaje %i:\nNombre: %s\ntipo: %s\nFuerza: %s\nSalud: %s\n", f+1, personaje[f].nom, personaje[f].ti, personaje[f].fuer, personaje[f].sal);}
+		else
+		printf("\nNo hay personajes registrados\n");
+		break;
 		default:
 		printf("\nOpcion no valida\n");}
 	    printf("\n緿esea repetir el programa? 1=si 0=no\n");
